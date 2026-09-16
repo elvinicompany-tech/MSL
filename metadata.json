@@ -1,0 +1,6 @@
+{
+  "name": "Rota Transição Energética - Grupo VIP WhatsApp",
+  "description": "Página de direcionamento direto ao grupo VIP exclusivo no WhatsApp para participantes do evento Rota Transição Energética.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
