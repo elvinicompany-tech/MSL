@@ -3,5 +3,88 @@
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #071b30;
+    color: #ffffff;
   }
+}
+
+@property --angle-1 {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: -75deg;
+}
+
+@property --angle-2 {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: -45deg;
+}
+
+@keyframes float1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-18px, 18px) scale(1.04); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(18px, -18px) scale(0.96); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.45), 0 0 50px rgba(0, 210, 180, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(37, 211, 102, 0.75), 0 0 80px rgba(0, 210, 180, 0.45);
+  }
+}
+
+/* Glass Card & Glass Button Styles inspired by modern component libraries */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(10, 35, 63, 0.78) 0%, rgba(7, 27, 48, 0.88) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    0 25px 60px -15px rgba(0, 0, 0, 0.65),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.glass-badge {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(0, 210, 180, 0.08) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.glass-sub-button {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.glass-sub-button:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.whatsapp-hero-btn {
+  animation: pulseGlow 3s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.whatsapp-hero-btn:hover {
+  transform: scale(1.02);
+  filter: brightness(1.08);
+}
+
+.whatsapp-hero-btn:active {
+  transform: scale(0.98);
 }
