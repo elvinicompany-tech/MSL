@@ -14,7 +14,7 @@ import {
 import { WhatsAppIcon } from './components/WhatsAppIcon';
 import { Confetti, ConfettiRef, TextLoop, BlurFade, GradientBackground } from './components/ui/sign-up';
 
-const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/HXsAvPCRCHXCfNTvOH9knd?mode=gi_t';
+const WHATSAPP_GROUP_URL = 'https://wa.me/message/3HXSDHHDB6RXK1';
 const OFFICIAL_SITE_URL = 'https://rotatransicaoenergetica.com.br/';
 
 export default function App() {
